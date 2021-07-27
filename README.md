@@ -1,18 +1,12 @@
 # Custom RSA Encryption
-Custom RSA Encryption implementation in Python 
+Custom RSA Encryption implementation in Python written by Alex Farrell
 
-# Installing dependencies
+## Installing dependencies
 Run: pip install -r requirements.txt 
 
-# Running the encryption implementation
+## Running the encryption implementation
 Navigate to rsa_encryption and run: python run_encryption.py
 
-### Dependencies
-sympy
-
-### Contributors:
-Alex Farrell
-
-### References:
+## References:
 1) https://en.wikipedia.org/wiki/RSA_(cryptosystem) [RSA Encryption Algorithm]
 2) https://en.wikipedia.org/wiki/Least_common_multiple [Least Common Multiple]
