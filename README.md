@@ -1,10 +1,11 @@
 # Custom RSA Encryption
 Custom RSA Encryption implementation in Python 
 
-Run: pip install -r requirements.txt to install sympy
+# Installing dependencies
+Run: pip install -r requirements.txt 
 
-To run, run run_encryption.py
-
+# Running the encryption implementation
+Navigate to rsa_encryption and run: python run_encryption.py
 
 ### Dependencies
 sympy
