@@ -1,6 +1,6 @@
 """
 
-    Basic commandline interfact to run the encryption implementation. 
+    Basic commandline interface to run the encryption implementation. 
     Simply navigate to this directory and run: python run_encryption.py
 
 """
