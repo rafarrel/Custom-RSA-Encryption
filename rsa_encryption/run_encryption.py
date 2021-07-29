@@ -1,3 +1,9 @@
+"""
+
+    Basic commandline interfact to run the encryption implementation. 
+    Simply navigate to this directory and run: python run_encryption.py
+
+"""
 from rsa_operation import *
 
 m = int(input('Enter integer m to encrypt (up to approximately 2^500) safely: '))
