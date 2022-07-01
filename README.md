@@ -1,14 +1,20 @@
 # Custom RSA Encryption
-Custom RSA Encryption implementation in Python written by Alex Farrell
+Custom RSA Encryption implementation in Python written by Alex Farrell.
 
-## Installing dependencies
-Run: pip install -r requirements.txt 
+### Installing dependencies
+``` 
+pip install -r requirements.txt 
+```
 
-## Running the encryption implementation
-Navigate to Custom-RSA-Encryption and run: python run_encryption.py
+### Running the encryption implementation
+```
+python run_encryption.py
+```
 
-## Running the unit tests
-Run: python -m unittest discover -s tests -p "*tests.py"
+### Running the unit tests
+```
+python -m unittest discover -s tests -p "*tests.py"
+```
 
 ## References:
 1) https://en.wikipedia.org/wiki/RSA_(cryptosystem) [RSA Encryption Algorithm]
