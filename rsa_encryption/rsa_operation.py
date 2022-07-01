@@ -8,7 +8,7 @@
 
 """
 import sympy
-from rsa_constants import *
+from rsa_encryption.rsa_constants import *
 
 
 #-----------------------------------------------------------------------------------------------#
