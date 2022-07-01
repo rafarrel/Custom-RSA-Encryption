@@ -52,7 +52,7 @@ def encrypt(n, e, m):
 
         Return c
     """
-    m = encode_message(m)
+    m = encode_message(str(m))
     c = pow(m, e, n)
 
     return c

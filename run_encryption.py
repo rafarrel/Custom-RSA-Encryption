@@ -4,7 +4,6 @@
     Simply navigate to this directory and run: python run_encryption.py
 
 """
-#from rsa_operation import *
 from rsa_encryption.rsa_operation import *
 
 

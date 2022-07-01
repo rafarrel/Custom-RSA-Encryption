@@ -7,6 +7,9 @@ Run: pip install -r requirements.txt
 ## Running the encryption implementation
 Navigate to Custom-RSA-Encryption and run: python run_encryption.py
 
+## Running the unit tests
+Run: python -m unittest discover -s tests -p "*tests.py"
+
 ## References:
 1) https://en.wikipedia.org/wiki/RSA_(cryptosystem) [RSA Encryption Algorithm]
 2) https://en.wikipedia.org/wiki/Least_common_multiple [Least Common Multiple]

@@ -39,10 +39,10 @@ class TestEncryption(unittest.TestCase):
         dm      = decrypt(n, d, c)
 
         # 1
-        self.assertTrue(type(dm) == int)
+        self.assertTrue(type(dm) == str)
 
         # 2
-        self.assertTrue(dm == m)
+        self.assertTrue(dm == str(m))
 
     def test_prime_lower_m_large(self):
         """
@@ -62,7 +62,7 @@ class TestEncryption(unittest.TestCase):
         dm = decrypt(n, d, c)
 
         # 1
-        self.assertTrue(dm == m)
+        self.assertTrue(dm == str(m))
 
 
 if __name__ == '__main__':
