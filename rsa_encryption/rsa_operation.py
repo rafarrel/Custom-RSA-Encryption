@@ -12,27 +12,63 @@ from rsa_constants import *
 
 
 #-----------------------------------------------------------------------------------------------#
+#  Message Encoding                                                                             #
+#-----------------------------------------------------------------------------------------------#
+
+def encode_message(message):
+    """
+        Encode string message as integer containing ASCII codes for each character separated by 
+        an integer-encoded buffer. This is used since the RSA Algorithm requires m be an integer.
+
+        Return encoded_message 
+    """
+    message_codes   = [str(ord(ch)) for ch in message]
+    encoded_message = int(CODE_BUFFER.join(message_codes))
+
+    return encoded_message
+
+
+def decode_message(encoded_message):
+    """
+        Decode encoded integer message back to string message.
+
+        Return decoded_message
+    """
+    message_codes   = str(encoded_message).split(CODE_BUFFER)
+    message_chars   = [chr(int(code)) for code in message_codes]
+    decoded_message = ''.join(message_chars)
+
+    return decoded_message
+
+
+#-----------------------------------------------------------------------------------------------#
 #  Encryption and Decryption                                                                    #
 #-----------------------------------------------------------------------------------------------#
 
 def encrypt(n, e, m):
     """
         Encrypt (optionally padded) plaintext integer m using public key components n and e ->
-            encrypted ciphertext ct = m^e mod(n)
+        encrypted ciphertext ct = m^e mod(n)
 
         Return c
     """
-    return pow(m, e, n)
+    m = encode_message(m)
+    c = pow(m, e, n)
+
+    return c
 
 
 def decrypt(n, d, c):
     """
         Decrypt encrypted ciphertext c using public key component n and private key exponent d ->
-            decrypted plaintext integer m = c^d mod(n)
+        decrypted plaintext integer m = c^d mod(n)
 
         Return m
     """
-    return pow(c, d, n)
+    m = pow(c, d, n)
+    m = decode_message(m)
+
+    return m
 
 
 #-----------------------------------------------------------------------------------------------#

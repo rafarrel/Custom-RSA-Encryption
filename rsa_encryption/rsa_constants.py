@@ -8,6 +8,11 @@
 # Operation                                                                                                  #
 #------------------------------------------------------------------------------------------------------------#
 
+# Encoding/Decoding
+CODE_BUFFER = '9009'           # Used to separate ASCII codes in encoded message. Guaranteed to not match or
+                               # disrupt any code in an encoded message (as codes go up to 255 and there is
+                               # no code 900).
+
 # Defaults
 DEFAULT_E = 65537              # Commonly chosen for a balance of performance and security (DO NOT CHANGE).
 
