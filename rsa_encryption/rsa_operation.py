@@ -160,10 +160,11 @@ def private_exponent(e, t):
 #  Validation methods                                                                           #
 #-----------------------------------------------------------------------------------------------#
 
-
 def validated_primes(p, q):
     """
         Ensure generated primes satisfy the proper conditions.
+
+        Return result
     """
     r1 = unique_primes(p, q)
     r2 = different_digits(p, q)
@@ -185,6 +186,8 @@ def different_digits(p, q):
     """
         Validate that ->
             1) p and q have a different number of digits.
+
+        Return result
     """
     p = str(p)
     q = str(q)
