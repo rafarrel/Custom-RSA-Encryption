@@ -1,7 +1,7 @@
 """
 
     Basic commandline interface to run the encryption implementation. 
-    Simply navigate to this directory and run: python run_encryption.py "MESSAGE"
+    Simply navigate to this directory and run: python run_encryption.py "MESSAGE_HERE"
 
 """
 import sys
