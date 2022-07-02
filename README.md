@@ -8,7 +8,7 @@ pip install -r requirements.txt
 
 ### Running the encryption implementation
 ```
-python run_encryption.py
+python run_encryption.py "MESSAGE_HERE"
 ```
 
 ### Running the unit tests
