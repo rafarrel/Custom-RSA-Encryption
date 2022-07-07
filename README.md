@@ -13,7 +13,7 @@ python run_encryption.py "MESSAGE_HERE"
 
 ### Running the unit tests
 ```
-python -m unittest discover tests "*tests.py"
+python -m unittest 
 ```
 
 ## References:
