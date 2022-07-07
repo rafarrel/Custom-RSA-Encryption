@@ -7,7 +7,7 @@ import unittest
 from rsa_encryption.rsa_constants import *
 from rsa_encryption.rsa_operation import *
 
-class TestEncryption(unittest.TestCase):
+class TestEncoding(unittest.TestCase):
 
     def test_encode_and_decode_message_basic(self):
         """
