@@ -91,15 +91,17 @@ def public_and_totient():
     """
         Generate public key components n and e as well as carmichael totient t.
     """
-    p, q = generate_primes()
-    n    = public_modulus(p, q)
-    t    = carmichael_totient(p, q)
-    e    = public_exponent()
+    for attempt in range(MAX_ITERATIONS):
+        p, q = generate_primes()
+        n    = public_modulus(p, q)
+        t    = carmichael_totient(p, q)
+        e    = public_exponent()
 
-    if validated_public(e, t):
-        return n, e, t
-    else:
-        return public_and_totient()
+        if validated_public(e, t):
+            return n, e, t
+
+    # This should never be reached in production.
+    raise Exception('ERROR: Maximum iterations exceeded while generating public key and totient.')
 
 
 def generate_primes():
@@ -109,13 +111,15 @@ def generate_primes():
 
         Return p and q
     """
-    p = sympy.randprime(PRIME_LOWER, PRIME_UPPER)
-    q = sympy.randprime(PRIME_LOWER, PRIME_UPPER)
+    for attempt in range(MAX_ITERATIONS):
+        p = sympy.randprime(PRIME_LOWER, PRIME_UPPER)
+        q = sympy.randprime(PRIME_LOWER, PRIME_UPPER)
 
-    if validated_primes(p, q):
-        return p, q
-    else:
-        return generate_primes()
+        if validated_primes(p, q):
+            return p, q
+
+    # This should never be reached in production.
+    raise Exception('ERROR: Maximum iterations exceeded while generating primes.')
 
 
 def public_modulus(p, q):

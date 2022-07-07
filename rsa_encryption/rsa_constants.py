@@ -13,6 +13,10 @@ CODE_BUFFER = '9009'           # Used to separate ASCII codes in encoded message
                                # disrupt any code in an encoded message (as codes go up to 255 and there is
                                # no code 900).
 
+MAX_ITERATIONS = 1000          # Maximum iterations for re-generating components that don't pass validation. If
+                               # exceeded, an error is raised and the application force quits. This should never
+                               # happen in production and is only included as a safety check.
+
 # Defaults
 DEFAULT_E = 65537              # Commonly chosen for a balance of performance and security (DO NOT CHANGE).
 

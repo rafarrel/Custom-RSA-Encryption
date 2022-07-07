@@ -24,16 +24,20 @@ try:
     dm      = decrypt(n, d, c)
 
     # Display Results
-    print('-'*70)
+    print('-' * 70)
     print('Original message: {}'.format(m))
-    print('-'*70)
+    print('-' * 70)
     wrapper = textwrap.TextWrapper(width=70)
     print(wrapper.fill(text='Ciphertext: ' + str(c)))
-    print('-'*70)
+    print('-' * 70)
     print('Decrypted message: {}'.format(dm))
-    print('-'*70)
+    print('-' * 70)
 except ValueError as verr:
     print(verr)
-except:
-    print('Uh-oh, something went wrong. Submit a pull request \
-           and I can fix it right away!')
+except Exception as err:
+    print('-' * 79)
+    print('Uh-oh, something went wrong. Submit a pull request',
+          'and I can fix it right away!')
+    print('-' * 79)
+    print(err)
+    print()
