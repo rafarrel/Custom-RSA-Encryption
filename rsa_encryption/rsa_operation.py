@@ -91,11 +91,12 @@ def public_and_totient():
     """
         Generate public key components n and e as well as carmichael totient t.
     """
+    p, q = generate_primes()
+    n    = public_modulus(p, q)
+
     for attempt in range(MAX_ITERATIONS):
-        p, q = generate_primes()
-        n    = public_modulus(p, q)
-        t    = carmichael_totient(p, q)
-        e    = public_exponent()
+        e = public_exponent()
+        t = carmichael_totient(p, q)
 
         if validated_public(e, t):
             return n, e, t
