@@ -55,5 +55,9 @@ T3 = 19996                     # Arbitrary totient such that T3 > e and gcd(e, T
 TEST_P = 32771                 # Anything above satisfies lcm specifications (see lower_bound_proof).
 TEST_Q = 32779                 # Next prime number after TEST_P.
 
+# Encoding/Decoding
+M_BASIC  = "This is a test!"   # Basic arbitrary string message for testing encoding/decoding functionality.
+M_BUFFER = "ZZ@9009@¾ÈŒZ@d9"   # Arbitraty string message containing characters with codes close to the buffer.
+
 # Encryption/Decryption
 M_LARGE = 2 ** 300             # Arbitrary large value for m (reasonable upper bound for guaranteed encryption).
